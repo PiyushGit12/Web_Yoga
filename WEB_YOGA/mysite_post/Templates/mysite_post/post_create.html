@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog-Post</title>
+    <h1> This is the blog post UI</h1>
+</head>
+<body>
+
+<table class="table mb-0">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Author_Name</th>
+        <th>Content</th>
+        <th>File Attached</th>
+    </tr>
+    </thead>
+    <body>
+    {% for bgl in blog_list %}
+    <tr>
+        <td>{{bgl.title}}</td>
+        <td>{{bgl.author_name}}</td>
+        <td>{{bgl.body}}</td>
+        <td><a href="{{bgl.File_f.url}}" class="btn btn-primary btn-sm" , target="_blank"> Downdload File</a></td>
+        {% endfor %}
+    </tr>
+
+    <div>
+        <video
+                width="420" height="340" controls>
+            <source src="{{ file_url }}" type="video/mp4">
+
+        </video>
+
+    </div>
+
+    </body>
+</table>
+
+
+
+
+</body>
+</html>
